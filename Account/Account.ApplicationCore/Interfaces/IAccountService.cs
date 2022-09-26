@@ -8,7 +8,6 @@ namespace Account.ApplicationCore.Interfaces
         Task<AccountEntity?> FindById(Guid id);
         Task<IEnumerable<AccountEntity>> Find();
         Task Debit(TransactionEntity transaction);
-        Task Credit(TransactionEntity transaction);
         Task<BalanceResponse> Balance();
     }
 }

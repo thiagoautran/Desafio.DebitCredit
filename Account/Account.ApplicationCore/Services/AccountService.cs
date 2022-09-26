@@ -41,19 +41,6 @@ namespace Account.ApplicationCore.Services
             await _accountRepository.Update(account);
         }
 
-        public async Task Credit(TransactionEntity transaction)
-        {
-            var account = await _accountRepository.FindById(transaction.AccountId);
-            if (account == null)
-                throw new NotFoundException();
-
-            transaction.OperationId = _credit;
-            account.Balance += transaction.Value;
-
-            await _transactionRepository.Insert(transaction);
-            await _accountRepository.Update(account);
-        }
-
         public async Task<BalanceResponse> Balance()
         {
             var amount = await _accountRepository.Balance();
