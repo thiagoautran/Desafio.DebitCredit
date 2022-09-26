@@ -4,7 +4,7 @@ namespace Credit.ApplicationCore.Interfaces
 {
     public interface IAccountRepository
     {
-        Task<AccountEntity?> Find(int agency, int accountNumber, int currentAccountDigit);
+        Task<AccountEntity?> Find(uint agency, uint accountNumber, uint currentAccountDigit);
         Task Update(AccountEntity account);
     }
 }

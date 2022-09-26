@@ -4,6 +4,6 @@ namespace Credit.ApplicationCore.Interfaces
 {
     public interface IAccountService
     {
-        Task Credit(int agency, int accountNumber, int currentAccountDigit, TransactionEntity transaction);
+        Task Credit(uint agency, uint accountNumber, uint currentAccountDigit, TransactionEntity transaction);
     }
 }

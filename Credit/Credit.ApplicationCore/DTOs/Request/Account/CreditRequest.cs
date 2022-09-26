@@ -5,11 +5,11 @@ namespace Credit.ApplicationCore.DTOs.Request.Account
     public class CreditRequest
     {
         [Required]
-        public int Agency { get; set; }
+        public uint Agency { get; set; }
         [Required]
-        public int AccountNumber { get; set; }
+        public uint AccountNumber { get; set; }
         [Required]
-        public int CurrentAccountDigit { get; set; }
+        public uint CurrentAccountDigit { get; set; }
         [Required]
         public decimal Value { get; set; }
     }

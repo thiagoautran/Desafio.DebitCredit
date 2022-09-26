@@ -14,7 +14,7 @@ namespace Credit.ApplicationCore.Services
         public AccountService(IAccountRepository accountRepository, ITransactionRepository transactionRepository) =>
             (_accountRepository, _transactionRepository) = (accountRepository, transactionRepository);
 
-        public async Task Credit(int agency, int accountNumber, int currentAccountDigit, TransactionEntity transaction)
+        public async Task Credit(uint agency, uint accountNumber, uint currentAccountDigit, TransactionEntity transaction)
         {
             var account = await _accountRepository.Find(agency, accountNumber, currentAccountDigit);
             if (account == null)

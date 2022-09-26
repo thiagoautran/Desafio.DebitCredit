@@ -12,7 +12,7 @@ namespace Credit.Infrastructure.Data
         public async Task<IEnumerable<AccountEntity>> Find() =>
             await _dbContext.Set<AccountEntity>().ToListAsync();
 
-        public async Task<AccountEntity?> Find(int agency, int accountNumber, int currentAccountDigit)
+        public async Task<AccountEntity?> Find(uint agency, uint accountNumber, uint currentAccountDigit)
         {
             var query = _dbContext.Set<AccountEntity>()
                 .Where(account => 
