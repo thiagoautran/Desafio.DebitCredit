@@ -37,7 +37,7 @@ docker build Account -t desafio.account
 docker run -p 8001:80 --network=bridge -e ASPNETCORE_ENVIRONMENT=Docker -e TZ=America/Sao_Paulo --restart=always --name desafio.account -d desafio.account
 </p>
 
-9) Acesse o endereço [www.localhost:8001](www.localhost:8001) no seu navegador para acessar a api account
+9) Acesse o endereço <www.localhost:8001> no seu navegador para acessar a api account
 
-10) Acesse o endereço [www.localhost:8002](www.localhost:8002) no seu navegador para acessar a api credit
+10) Acesse o endereço <www.localhost:8002> no seu navegador para acessar a api credit
 
