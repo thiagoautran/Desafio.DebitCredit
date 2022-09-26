@@ -10,7 +10,7 @@ docker run --name=SqlServer2022 --restart=always --network=bridge -p 1433:1433 -
 
 2) Faça o download e instale o Azure Data Studio
 <p>
-[Azure Data Studio](https://go.microsoft.com/fwlink/?linkid=2204567)
+<https://go.microsoft.com/fwlink/?linkid=2204567>
 </p>
 
 3) Baixe o repositorio do projeto
