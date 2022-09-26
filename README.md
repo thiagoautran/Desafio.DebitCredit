@@ -39,6 +39,8 @@ Password: Adm#n#str@dor
 4) Execute o comando para criar a imagem da api account no docker
 > docker build Account -t desafio.account
 
+<br/>
+
 ### Publicando as api's no docker
 
 1) Execute o comando para criar o container da api credit no docker
