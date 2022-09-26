@@ -15,11 +15,11 @@
 2) Crie o banco de dados
 * Abra o Azure Data Studio
 * Connect no banco de dados SqlServer2022
-ˋˋˋ
-Server: localhost
-User name: sa
+<p>
+Server: localhost <br/>
+User name: sa <br/>
 Password: Adm#n#str@dor
-ˋˋˋ
+</p>
 * Abra o arquivo DataBase.sql na raiz do repositorio e execute o script
 
 ### Criando as imagens dos projetos
