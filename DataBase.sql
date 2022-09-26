@@ -1,8 +1,7 @@
-DROP TABLE [Transaction]
-DROP TABLE [Account]
-DROP TABLE [Person]
-DROP TABLE [Operation]
-
+CREATE DATABASE Conta;
+GO
+USE Conta;
+GO
 CREATE TABLE [dbo].[Person](
 	[Id] [uniqueidentifier] NOT NULL,
 	[Name] [varchar](100) NOT NULL
