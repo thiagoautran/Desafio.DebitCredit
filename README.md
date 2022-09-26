@@ -7,7 +7,6 @@
 <https://go.microsoft.com/fwlink/?linkid=2204567>
 
 <br/>
-<br/>
 
 ### Preparando banco de dados
 
@@ -26,7 +25,6 @@ Password: Adm#n#str@dor
 
 * Abra o arquivo DataBase.sql na raiz do repositorio e execute o script
 
-<br/>
 <br/>
 
 ### Criando as imagens dos projetos
@@ -49,7 +47,6 @@ Password: Adm#n#str@dor
 2) Execute o comando para criar o container da api account no docker
 > docker run -p 8001:80 --network=bridge -e ASPNETCORE_ENVIRONMENT=Docker -e TZ=America/Sao_Paulo --restart=always --name desafio.account -d desafio.account
 
-<br/>
 <br/>
 
 ### Acessando projetos publicados
