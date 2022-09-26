@@ -1,39 +1,47 @@
-0) Faça o download e instale o Docker
+### Preparando ambiente
+
+1) Instale o Docker
 <https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe>
 
-1) Baixe o banco de dados SqlServer usando o docker, com o comando abaixo
-<p>
-docker run --name=SqlServer2022 --restart=always --network=bridge -p 1433:1433 -e "ACCEPT_EULA=Y" -e TZ=America/Sao_Paulo -e "SA_PASSWORD=Adm#n#str@dor" -v /custom/mount:/var/lib/sqlserver2022/data -d mcr.microsoft.com/mssql/server:2022-latest
-</p>
-
-2) Faça o download e instale o Azure Data Studio
+2) Instale o Azure Data Studio
 <https://go.microsoft.com/fwlink/?linkid=2204567>
 
-3) Baixe o repositorio do projeto
+### Preparando banco de dados
 
-4) Abra o terminal do windows na pasta do repositorio do projeto
+1) Instale o SqlServer
+* Abra o terminal e digite o comando abaixo
+> docker run --name=SqlServer2022 --restart=always --network=bridge -p 1433:1433 -e "ACCEPT_EULA=Y" -e TZ=America/Sao_Paulo -e "SA_PASSWORD=Adm#n#str@dor" -v /custom/mount:/var/lib/sqlserver2022/data -d mcr.microsoft.com/mssql/server:2022-latest
 
-5) Execute o comando para criar a imagem da api credit no docker
-<p>
-docker build Credit -t desafio.credit
-</p>
+2) Crie o banco de dados
+* Abra o Azure Data Studio
+* Connect no banco de dados SqlServer2022
+> Server: localhost
+> User name: sa
+> Password: Adm#n#str@dor
+* Abra o arquivo DataBase.sql na raiz do repositorio e execute o script
 
-6) Execute o comando para criar o container da api credit no docker
-<p>
-docker run -p 8002:80 --network=bridge -e ASPNETCORE_ENVIRONMENT=Docker -e TZ=America/Sao_Paulo --restart=always --name desafio.credit -d desafio.credit
-</p>
+### Criando as imagens dos projetos
 
-7) Execute o comando para criar a imagem da api account no docker
-<p>
-docker build Account -t desafio.account
-</p>
+1) Baixe o repositorio do projeto
 
-8) Execute o comando para criar o container da api account no docker
-<p>
-docker run -p 8001:80 --network=bridge -e ASPNETCORE_ENVIRONMENT=Docker -e TZ=America/Sao_Paulo --restart=always --name desafio.account -d desafio.account
-</p>
+2) Abra o terminal do windows na pasta do repositorio do projeto
 
-9) Acesse o endereço [www.localhost:8001](http://www.localhost:8001/index.html) no seu navegador para acessar a api account
+3) Execute o comando para criar a imagem da api credit no docker
+> docker build Credit -t desafio.credit
 
-10) Acesse o endereço [www.localhost:8002](http://www.localhost:8002/index.html) no seu navegador para acessar a api credit
+4) Execute o comando para criar a imagem da api account no docker
+> docker build Account -t desafio.account
 
+### Publicando as api's no docker
+
+1) Execute o comando para criar o container da api credit no docker
+> docker run -p 8002:80 --network=bridge -e ASPNETCORE_ENVIRONMENT=Docker -e TZ=America/Sao_Paulo --restart=always --name desafio.credit -d desafio.credit
+
+2) Execute o comando para criar o container da api account no docker
+> docker run -p 8001:80 --network=bridge -e ASPNETCORE_ENVIRONMENT=Docker -e TZ=America/Sao_Paulo --restart=always --name desafio.account -d desafio.account
+
+### Acessando projetos publicados
+
+1) Api account [www.localhost:8001](http://www.localhost:8001/index.html)
+
+2) Api credit [www.localhost:8002](http://www.localhost:8002/index.html)
