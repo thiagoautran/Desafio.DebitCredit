@@ -1,7 +1,5 @@
 0) Faça o download e instale o Docker
-<p>
-[docker](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
-</p>
+<https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe>
 
 1) Baixe o banco de dados SqlServer usando o docker, com o comando abaixo
 <p>
