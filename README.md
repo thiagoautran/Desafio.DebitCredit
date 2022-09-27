@@ -17,11 +17,9 @@
 2) Crie o banco de dados
 * Abra o Azure Data Studio
 * Connect no banco de dados SqlServer2022
-<p>
-Server: localhost <br/>
-User name: sa <br/>
-Password: Adm#n#str@dor
-</p>
+> Server: localhost <br/>
+> User name: sa <br/>
+> Password: Adm#n#str@dor
 
 * Abra o arquivo [DataBase.sql](https://github.com/thiagoautran/Desafio.DebitCredit/blob/main/DataBase.sql) na raiz do repositorio e execute o script
 
