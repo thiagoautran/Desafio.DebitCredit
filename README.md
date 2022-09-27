@@ -23,7 +23,7 @@ User name: sa <br/>
 Password: Adm#n#str@dor
 </p>
 
-* Abra o arquivo DataBase.sql na raiz do repositorio e execute o script
+* Abra o arquivo [DataBase.sql](https://github.com/thiagoautran/Desafio.DebitCredit/blob/main/DataBase.sql) na raiz do repositorio e execute o script
 
 <br/>
 
